@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>syncthing服务器（linux）端的安装教程 &amp;amp; 碎碎念</title>
+    <link href="/2022/11/19/syncthing%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88linux%EF%BC%89%E7%AB%AF%E7%9A%84%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B-&amp;amp;-%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    <url>/2022/11/19/syncthing%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88linux%EF%BC%89%E7%AB%AF%E7%9A%84%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B-&amp;amp;-%E7%A2%8E%E7%A2%8E%E5%BF%B5/</url>
+    
+    <content type="html"><![CDATA[<p>syncthing服务器（linux）端的安装教程</p><p><img src="https://pan.heky.tk/d/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/OIP-C.jpg" alt="OIP-C"></p><ol><li><p>查看自己的linux版本</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">dpkg --print-architecture<br></code></pre></td></tr></table></figure></li><li><p>打开链接下载对应版本的文件（科学上网）</p><p><a href="https://github.com/syncthing/syncthing/releases">链接</a></p></li><li><p>上传到服务器</p></li><li><p>解压</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">tar zxf xxx.tar.gz<br></code></pre></td></tr></table></figure></li><li><p>打开可执行文件</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">cd</span> /opt     <span class="hljs-comment">#打开对应目录</span><br>./syncthing<br></code></pre></td></tr></table></figure><p>需要开放端口22000，8384，8385</p></li></ol><p>使用教程请自行百度</p><hr><p>碎碎念：</p><p>rpm安装默认目录：<br>数据文件：&#x2F;var&#x2F;lib&#x2F;mysql&#x2F;<br>配置文件模板：&#x2F;usr&#x2F;share&#x2F;mysql<br>mysql客户端工具目录：&#x2F;usr&#x2F;bin<br>日志目录：&#x2F;var&#x2F;log&#x2F;<br>pid，sock文件目录：&#x2F;tmp&#x2F;</p><p>在一通作死的尝试后服务器成功被我搞坏</p><p>我得到两个启示</p><ol><li>遇到问题先reboot</li><li>遇到问题先reboot</li></ol><p>现在是第三次重装服务器</p><p>有点小难受，看着之前的积累就这样的无了，哎。</p><p>其实静下心来想，也没有什么人来看我的博客，这样的结局或许是最好的吧。</p><p>好吧，救活了，就是在重装完mysql后nginx的配置可能会变。</p><p>然后我也重装了，然后服务器就奔溃了，404</p><p>然后就是万能reboot</p><p>这次service nginx status 是active在运行了</p><p>就是打开网址都是跳到默认网址。</p><p>我后面想了一下应该是软链接的问题，毕竟配置还在。</p><p>就把原来的软链接删掉，然后重新建立软链接。</p><p>ok了复活了</p><p>这次主要还是mysql的事。</p><p>一直reboot也是治标不治本，赶紧重装了一下倒还好。及时止损。<br><img src="https://pan.heky.tk/d/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/0072Vf1pgy1foxkc7d4wnj31hc0u0aqh.jpg"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>生活</category>
+      
+      <category>分享</category>
+      
+      <category>linux</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>移动k1，现在是不行了</title>
+    <link href="/2022/11/05/%E7%A7%BB%E5%8A%A8k1%EF%BC%8C%E7%8E%B0%E5%9C%A8%E6%98%AF%E4%B8%8D%E8%A1%8C%E4%BA%86/"/>
+    <url>/2022/11/05/%E7%A7%BB%E5%8A%A8k1%EF%BC%8C%E7%8E%B0%E5%9C%A8%E6%98%AF%E4%B8%8D%E8%A1%8C%E4%BA%86/</url>
+    
+    <content type="html"><![CDATA[<p>移动k1，现在是不行了</p><p><img src="https://pan.heky.tk/d/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/2022-11-05_13-12-24.png" alt="2022-11-05_13-12-24"></p><p>应用中心的服务器已经连不上了</p><blockquote><p><img src="https://pan.heky.tk/d/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/image-20221105131325427.png" alt="image-20221105131325427"></p><p>在手机自带应用商店里下载一个app，下载完成、进入安装界面后，按“挂机键”返回主页；在手机自带文件管理器里找到刚才在应用商店里下载的app对应的apk文件存放路径（Android——data——com….ppstore——cache——apk），记住它；在电脑上打开这个路径，进去后把这个apk文件拷贝出来；之后，在电脑上下载好你想安装的app的apk文件，把这个apk文件的文件名改成刚才拷贝出来的那个apk文件的文件名（之所以拷贝出来就是为了方便复制文件名）；把改好名的apk文件拷贝到手机上（比如放到Download文件夹里）；打开手机文件管理器，进入Download文件夹（或者你刚才放到的那个文件夹），找到你拷贝进去的apk文件，点“选项”——“选择多个”——上下选择，之后点“确定”选中这个apk文件——点“选项”——“复制”，这时窗口刷新，之后一步步进入那个在应用商店里下载的apk文件的存放路径，在那个apk文件上点“选项”——“粘贴”——弹出窗口问是“替换”还是“均保留”，选“替换”（默认）——点“确定”。之后还是点“挂机键”返回主页，点击手机应用商店的图标，这时你会发现，app安装界面上显示，即将安装的app就变成了你想安装的那个app。正常安装即可。成功。</p></blockquote><p>像是上面的那些方法都不行了</p><p>然后就是像adb的 爱adb install -r -d 的强制安装也会应为权限不足而不行。（没有root）</p><p>啊，真的是。</p><blockquote><p><img src="https://pan.heky.tk/d/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/image-20221105131727323.png" alt="image-20221105131727323"></p></blockquote><p>“我不能把时间接着花在这上面了。”</p><p>本来想用投屏控制器，结果也不是很行。难受<br><img src="https://pan.heky.tk/d/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/B%E7%AB%99%E8%A1%A8%E6%83%85%5C2233%E5%A8%98%5C[2233%E5%A8%98_%E5%A4%A7%E5%93%AD].png" alt="![2233娘_大哭](https://pan.heky.tk/d/博客图片/B站表情\2233娘[2233娘_大哭].png)"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>乱bb</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Samba——ubuntu</title>
+    <link href="/2022/10/03/Samba%E2%80%94%E2%80%94ubuntu/"/>
+    <url>/2022/10/03/Samba%E2%80%94%E2%80%94ubuntu/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Samba——ubuntu"><a href="#Samba——ubuntu" class="headerlink" title="Samba——ubuntu"></a>Samba——ubuntu</h1><p>安装</p><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crystal">apt-get update<br>apt-get install samber<br></code></pre></td></tr></table></figure><p>编辑smb.conf配置文件</p><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crystal">vim /etc/samba/smb.conf<br></code></pre></td></tr></table></figure><p>在末尾添加上如下代码后保存并退出</p><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs crystal">[share]  <br>path = <span class="hljs-regexp">/home/share</span><span class="hljs-regexp">/shared /</span><span class="hljs-regexp">/ 这里需要修改成你的用户名和共享文件夹名  </span><br><span class="hljs-regexp">available = yes  </span><br><span class="hljs-regexp">browseable = yes  </span><br><span class="hljs-regexp">public = yes  </span><br><span class="hljs-regexp">writable = yes </span><br><span class="hljs-regexp"></span><br></code></pre></td></tr></table></figure><p>创建root用户密码:</p><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crystal">smbpasswd -a root<br></code></pre></td></tr></table></figure><p>输入你的共享访问密码</p><p>重启SMB服务,完成配置</p><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crystal">service smbd restart<br></code></pre></td></tr></table></figure><p>三、共享的访问方法</p><p>开发端口：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo ufw allow 139<br>sudo ufw allow 445<br></code></pre></td></tr></table></figure><p>共享设置完成,使用电脑访问共享，win系统电脑端：</p><p>开始–运行 输入 \\<IP></p><p>移动端：</p><p>安装应用 es文件浏览器(<del>广告多</del>)<img src="https://pan.heky.tk/d/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/ku/ku/coolapk_emotion_64_shounuehuaji.png"></p><p>网络——局域网——添加</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>linux</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>谷歌团队盘的获取</title>
+    <link href="/2022/10/02/%E8%B0%B7%E6%AD%8C%E5%9B%A2%E9%98%9F%E7%9B%98%E7%9A%84%E8%8E%B7%E5%8F%96/"/>
+    <url>/2022/10/02/%E8%B0%B7%E6%AD%8C%E5%9B%A2%E9%98%9F%E7%9B%98%E7%9A%84%E8%8E%B7%E5%8F%96/</url>
+    
+    <content type="html"><![CDATA[<p>谷歌团队盘的获取链接：<a href="https://td.msgsuite.workers.dev/">团队驱动发电机 (msgsuite.workers.dev)</a></p><p><img src="https://pan.heky.tk/d/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/image-20221002180310588.png" alt="image-20221002180310588"></p><blockquote><p><code>（翻译）</code></p><p>使用前</p><p>本网站是共享驱动器的免费生成器。<br>但免费并不意味着你可以滥用！</p><p>什么被视为滥用？</p><ul><li>创建数十个空共享驱动器</li><li>存储您永远不会使用的<br>Tb数据 - 存储非法内容或色情内容</li></ul><p>滥用可能带来的后果是什么？</p><ul><li>谷歌将像对待EDU<br>一样施加限制 - 大学和组织可以删除所有团队驱动器</li><li>大学和组织将取消订阅（最坏的情况）</li></ul><p>滥用这项免费服务将导致更多的谷歌限制。</p></blockquote><p><img src="https://pan.heky.tk/d/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/msedge_zBv3p4NPpa.png" alt="msedge_zBv3p4NPpa"></p><p>分别填上你想要给你的团队盘取得名字以及使用这个团队盘的谷歌账号（邮箱），在验证之后点击creat就可以创建了</p><p>在创建了以后就可以在云端硬盘（googledrive）的网页或者是客户端的‘共享云端硬盘’的地方看到申请的团队盘</p><p><img src="https://pan.heky.tk/d/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/image-20221002181436019.png" alt="image-20221002181436019"></p><p>写在后面：且用且珍惜，有的时候就会发现其实单纯就是对有这件东西保有很大的执著，并没有想去好好的利用，有的东西越多反而就是越空虚越欲求不满。<br>网站作者的tg留言：</p><p><img src="https://pan.heky.tk/d/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/msedge_lQRf7B8ARR.png" alt="msedge_lQRf7B8ARR"></p><p>(翻译：)</p><p><img src="https://pan.heky.tk/d/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/msedge_MaKtYVIwSH.png" alt="msedge_MaKtYVIwSH"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>分享</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>rclone——让你的onedrive好用一点点？</title>
+    <link href="/2022/09/11/rclone%E2%80%94%E2%80%94%E8%AE%A9%E4%BD%A0%E7%9A%84onedrive%E5%A5%BD%E7%94%A8%E4%B8%80%E7%82%B9%E7%82%B9%EF%BC%9F/"/>
+    <url>/2022/09/11/rclone%E2%80%94%E2%80%94%E8%AE%A9%E4%BD%A0%E7%9A%84onedrive%E5%A5%BD%E7%94%A8%E4%B8%80%E7%82%B9%E7%82%B9%EF%BC%9F/</url>
+    
+    <content type="html"><![CDATA[<p>下载地址：[官网][1] [github][2]<br><img src="https://pan.heky.tk/d/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/msedge_uCWS3bgeSc.png"><br>我感觉大部分的情况应该就是下第一个就好了<br>github下划线的第一个或第二个应该都是可以的<br><img src="https://cdn.jsdelivr.net/gh/heky12356/photobed/img/msedge_hBxKLS5I6y.png"><br>下载完之后会有一个解压包，解压之后里面还有一个文件夹，可以保存到其他的地方，比如我就是放在<code>Program Files</code><br>放在其他地方也可。<br>放完之后打开会发现是一个命令行的输入框，有一个提示让我们用<code>cmd</code>打开<br><img src="https://cdn.jsdelivr.net/gh/heky12356/photobed/img/rclone_EWdrPwPP1N.png"><br>这个时候我们就按一下键盘上的<code>win</code>键和<code>R</code>键打开‘运行’然后输入‘cmd’<br><img src="https://cdn.jsdelivr.net/gh/heky12356/photobed/img/explorer_bXlJWNTpq7.png"><br>按一下回车键或者点击确定<br>就打开了‘cmd’<br><img src="https://cdn.jsdelivr.net/gh/heky12356/photobed/img/20220911192821.png"><br>这个时候有一个地方要注意，如果刚才下载的文件保存的地方是在c盘，那就复制一下<code>文件夹</code>的路径，然后再cmd里输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs win">cd &#x27;复制的路径&#x27;           //不用加引号<br></code></pre></td></tr></table></figure><p>tips：按一下鼠标的右键可以粘贴<br>然后回车，会发现左边“&gt;”前面的文字发生了改变变成了文件夹的名字，像下面这样<br><img src="https://cdn.jsdelivr.net/gh/heky12356/photobed/img/20220911193400.png"><br>如果不是放在c盘，那就需要在系统变量PATH处添加路径，具体步骤可以自行百度<br><img src="https://cdn.jsdelivr.net/gh/heky12356/photobed/img/20220911193648.png"><br>之后就是输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs win">rclone config<br></code></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/heky12356/photobed/img/20220911194250.png"><br>按回车之后<br>按照提示分别输入，以下是参考</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br></pre></td><td class="code"><pre><code class="hljs win">PS C:\Windows\system32&gt; rclone config  (步骤1. 输入rclone config)<br>2020/04/25 13:29:37 NOTICE: Config file &quot;C:\\Users\\dell\\.config\\rclone\\rclone.conf&quot; not found - using defaults<br>No remotes found - make a new one<br>n) New remote<br>s) Set configuration password<br>q) Quit config<br>n/s/q&gt; n  (步骤2. 输入n，表示新建配置)<br>name&gt; onedrive  (步骤3. 命名为&quot;onedrive&quot;，也可取其他的名字，但要与下面所使用的名字保持一致)<br>Type of storage to configure.<br>Enter a string value. Press Enter for the default (&quot;&quot;).<br>Choose a number from below, or type in your own value<br> 1 / 1Fichier<br>   \ &quot;fichier&quot;<br> 2 / Alias for an existing remote<br>   \ &quot;alias&quot;<br> 3 / Amazon Drive<br>   \ &quot;amazon cloud drive&quot;<br> 4 / Amazon S3 Compliant Storage Provider (AWS, Alibaba, Ceph, Digital Ocean, Dreamhost, IBM COS, Minio, etc)<br>   \ &quot;s3&quot;<br> 5 / Backblaze B2<br>   \ &quot;b2&quot;<br> 6 / Box<br>   \ &quot;box&quot;<br> 7 / Cache a remote<br>   \ &quot;cache&quot;<br> 8 / Citrix Sharefile<br>   \ &quot;sharefile&quot;<br> 9 / Dropbox<br>   \ &quot;dropbox&quot;<br>10 / Encrypt/Decrypt a remote<br>   \ &quot;crypt&quot;<br>11 / FTP Connection<br>   \ &quot;ftp&quot;<br>12 / Google Cloud Storage (this is not Google Drive)<br>   \ &quot;google cloud storage&quot;<br>13 / Google Drive<br>   \ &quot;drive&quot;<br>14 / Google Photos<br>   \ &quot;google photos&quot;<br>15 / Hubic<br>   \ &quot;hubic&quot;<br>16 / In memory object storage system.<br>   \ &quot;memory&quot;<br>17 / JottaCloud<br>   \ &quot;jottacloud&quot;<br>18 / Koofr<br>   \ &quot;koofr&quot;<br>19 / Local Disk<br>   \ &quot;local&quot;<br>20 / Mail.ru Cloud<br>   \ &quot;mailru&quot;<br>21 / Mega<br>   \ &quot;mega&quot;<br>22 / Microsoft Azure Blob Storage<br>   \ &quot;azureblob&quot;<br>23 / Microsoft OneDrive<br>   \ &quot;onedrive&quot;<br>24 / OpenDrive<br>   \ &quot;opendrive&quot;<br>25 / Openstack Swift (Rackspace Cloud Files, Memset Memstore, OVH)<br>   \ &quot;swift&quot;<br>26 / Pcloud<br>   \ &quot;pcloud&quot;<br>27 / Put.io<br>   \ &quot;putio&quot;<br>28 / QingCloud Object Storage<br>   \ &quot;qingstor&quot;<br>29 / SSH/SFTP Connection<br>   \ &quot;sftp&quot;<br>30 / Sugarsync<br>   \ &quot;sugarsync&quot;<br>31 / Transparently chunk/split large files<br>   \ &quot;chunker&quot;<br>32 / Union merges the contents of several remotes<br>   \ &quot;union&quot;<br>33 / Webdav<br>   \ &quot;webdav&quot;<br>34 / Yandex Disk<br>   \ &quot;yandex&quot;<br>35 / http Connection<br>   \ &quot;http&quot;<br>36 / premiumize.me<br>Storage&gt; 23  (步骤4. 输入数字23,因为Microsoft OneDrive对应的类型是23)<br>** See help for onedrive backend at: https://rclone.org/onedrive/ **<br><br>Microsoft App Client Id<br>Leave blank normally.<br>Enter a string value. Press Enter for the default (&quot;&quot;).<br>client_id&gt;  (步骤5. 按enter键跳过)<br>Microsoft App Client Secret<br>Leave blank normally.<br>Enter a string value. Press Enter for the default (&quot;&quot;).<br>client_secret&gt;  (步骤6. 按enter键跳过)<br>Edit advanced config? (y/n)<br>y) Yes<br>n) No (default)<br>y/n&gt; n  (步骤7. 输入n，采用默认设置)<br>Remote config<br>Use auto config?<br> * Say Y if not sure<br> * Say N if you are working on a remote or headless machine<br>y) Yes (default)<br>n) No<br>y/n&gt; y (步骤8. 输入y，采用默认设置)<br>If your browser doesn&#x27;t open automatically go to the following link: http://127.0.0.1:53682/auth?state=lcvcDmCLf1ugmaCzlEtMSA<br>Log in and authorize rclone for access<br>Waiting for code...<br>----------------------------------<br>(步骤8执行后会跳转到Microsoft OneDrive账号登录界面和授权界面，登录后在授权请求界面点击“是”)<br>-----------------------------------<br>Got code<br>Choose a number from below, or type in an existing value<br> 1 / OneDrive Personal or Business<br>   \ &quot;onedrive&quot;<br> 2 / Root Sharepoint site<br>   \ &quot;sharepoint&quot;<br> 3 / Type in driveID<br>   \ &quot;driveid&quot;<br> 4 / Type in SiteID<br>   \ &quot;siteid&quot;<br> 5 / Search a Sharepoint site<br>   \ &quot;search&quot;<br>Your choice&gt; 1  (步骤9. 输入1，数字1对应OneDrive Personal or Business)<br>Found 1 drives, please select the one you want to use:<br>0:  (personal) id=cdffcd6a2a3dc176<br>Chose drive to use:&gt; 0 (步骤10. 输入0，数字0对应OneDrive个人版)<br>Found drive &#x27;root&#x27; of type &#x27;personal&#x27;, URL: https://onedrive.live.com/?cid=cdffcd6a2a3dc176<br>Is that okay?<br>y) Yes (default)<br>n) No<br>y/n&gt; y  0 (步骤11. 输入y，采用默认设置)<br>--------------------<br>[onedrive]<br>type = onedrive<br>token = &#123;&quot;access_token&quot;:&quot;(隐私信息省略）*************************************************************************************<br>drive_id = (隐私信息省略）***************<br>drive_type = personal<br>--------------------<br>y) Yes this is OK (default)<br>e) Edit this remote<br>d) Delete this remote<br>y/e/d&gt; y  (步骤12. 输入y)<br>Current remotes:<br><br>Name                 Type<br>====                 ====<br>onedrive             onedrive<br><br>e) Edit existing remote<br>n) New remote<br>d) Delete remote<br>r) Rename remote<br>c) Copy remote<br>s) Set configuration password<br>q) Quit config<br>e/n/d/r/c/s/q&gt; q  (步骤13. 输入q，退出)<br></code></pre></td></tr></table></figure><p>实际操作起来可能会有一点点不一样，主要是按照程序给的提示来。<br>这些完成之后就可以选择是使用命令行来挂载和使用网盘，还是用图像界面。<br>我在用的时候是毫不犹豫的使用图形界面就是——RcloneBrowser了<br>也是一样先下载：[github][3] [github2][4]<br>有两个地方，第一个地方是下到v1.8第二个地方是下到v1.2可能是作者变了改仓库<br>我只用过v1.8的版本，不过我刚才下了v1.2的版本，发现可以直接用，没有v1.8要设置一下才行，然后就是1.8的版本是要安装的<br>1.2的版本不用安装直接是文件夹里打开.exe就可以用了<br><img src="https://cdn.jsdelivr.net/gh/heky12356/photobed/img/20220911195617.png"><br><img src="https://cdn.jsdelivr.net/gh/heky12356/photobed/img/20220911195655.png"><br>下面以1.8的版本为例<br>下载好后进行安装，然后进行配置，配置 rclone.exe 的路径还有 rclone.conf 配置文件的路径<br>rclone.conf 的路径 ：<code>C:\Users\****(用户的名称)\AppData\Roaming\rclone\rclone.conf</code><br><img src="https://cdn.jsdelivr.net/gh/heky12356/photobed/img/20220917141947.png"><br>配置好之后就是点击’OK’然后就会有以下的界面，<br><img src="https://cdn.jsdelivr.net/gh/heky12356/photobed/img/20220911202139.png"><br>双击刚刚创建的连接或者说网盘，就可以使用了<br><img src="https://cdn.jsdelivr.net/gh/heky12356/photobed/img/20220911202613.png"><br>其实主要就是上传和下载两个功能，然后就是可以直接查看网盘的内容，比如你有两个OneDrive的账号，然后不是很习惯使用<br>office中onedrive的客户端就可以用rclone<br>  [1]: <a href="https://rclone.org/downloads/">https://rclone.org/downloads/</a><br>  [2]: <a href="https://github.com/rclone/rclone/releases">https://github.com/rclone/rclone/releases</a><br>  [3]: <a href="https://github.com/kapitainsky/RcloneBrowser/releases">https://github.com/kapitainsky/RcloneBrowser/releases</a><br>  [4]: <a href="https://github.com/mmozeiko/RcloneBrowser/releases">https://github.com/mmozeiko/RcloneBrowser/releases</a><br>  [5]: <a href="https://tdeh.top/archives/technology/office-365-e5-renew/">https://tdeh.top/archives/technology/office-365-e5-renew/</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>分享</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>hexo</title>
+    <link href="/2022/08/14/hexo/"/>
+    <url>/2022/08/14/hexo/</url>
+    
+    <content type="html"><![CDATA[<p>安装butterfly主题前安装的依赖：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive<br></code></pre></td></tr></table></figure><p>安装<code>hexo-deployer-git</code>:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">npm install --save hexo-deployer-git<br></code></pre></td></tr></table></figure><p>更改_config.yml文件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs linux">deploy<br>  type: git<br>  repository: git@github.com:YOUR_ID/YOUR_ID.github.io.git<br>  branch: master<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>分享</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Tmux</title>
+    <link href="/2022/08/14/Tmux/"/>
+    <url>/2022/08/14/Tmux/</url>
+    
+    <content type="html"><![CDATA[<p>安装：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs linux"><br># Ubuntu 或 Debian<br>sudo apt-get install tmux<br><br># CentOS 或 Fedora<br>sudo yum install tmux<br><br># Mac<br>brew install tmux<br></code></pre></td></tr></table></figure><p>启动：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">tmux new -s &lt;session-name&gt;<br></code></pre></td></tr></table></figure><p>分离会话：<br>先按下<code>Ctrl+b</code>再按下<code>d</code></p><p>输入以下代码查看tmux窗口列表：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">tmux ls<br></code></pre></td></tr></table></figure><p>接入会话：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">tmux attach -t &lt;session-name&gt;<br></code></pre></td></tr></table></figure><p>杀死会话:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">tmux kill-session -t &lt;session-name&gt;<br></code></pre></td></tr></table></figure><p>切换会话：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">tmux switch -t &lt;session-name&gt;<br></code></pre></td></tr></table></figure><p>重命名会话：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">tmux rename-session -t &lt;session-name&gt; &lt;new-name&gt;<br></code></pre></td></tr></table></figure><p>快捷键：</p><ul><li>Ctrl+b d：分离当前会话。</li><li>Ctrl+b s：列出所有会话。</li><li>Ctrl+b $：重命名当前会话。</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>linux</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>mirai高效率QQ机器人搭建</title>
+    <link href="/2022/08/13/mirai%E9%AB%98%E6%95%88%E7%8E%87QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA/"/>
+    <url>/2022/08/13/mirai%E9%AB%98%E6%95%88%E7%8E%87QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA/</url>
+    
+    <content type="html"><![CDATA[<p>#第一步：安装java<br>推荐是java11</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs linux">sudo apt update<br>sudo apt install openjdk-11-jdk<br></code></pre></td></tr></table></figure><p>安装完成后可以通过以下指令来检测：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">java -version<br></code></pre></td></tr></table></figure><p>输出类似下面这样：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs linux">openjdk version &quot;11.0.7&quot; 2020-04-14<br>OpenJDK Runtime Environment (build 11.0.7+10-post-Ubuntu-3ubuntu1)<br>OpenJDK 64-Bit Server VM (build 11.0.7+10-post-Ubuntu-3ubuntu1, mixed mode, sharing)<br></code></pre></td></tr></table></figure><p>#第二步：下载安装包上传，并安装<br>安装包下载:<a href="https://github.com/iTXTech/mirai-console-loader/releases">release</a><br><img src="https://cdn.jsdelivr.net/gh/heky12356/photobed/2022-08/msedge_2wzKZN67dC.png" alt="请输入图片描述"><br>####点击图片中mcl-2.1.0.zip<br>上传时可以是上传整个zip包也可以是解压后上传<br>区别就是是否在服务器内解压，在服务器解压需安装<code>unzip</code><br>安装unzip:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">apt install unzip<br></code></pre></td></tr></table></figure><p>如果报错可以先输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">apt update<br></code></pre></td></tr></table></figure><p>然后再尝试<br>上传的目录可以随意<br>我是在<code>/usr</code>目录下新建文件夹<code>mcl</code>:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">mkdir mcl<br></code></pre></td></tr></table></figure><p>将文件上传并解压后<code>cd</code>到目录下输入代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs linux">cd /&#x27;目录路径&#x27;   #不需要单引号<br>chmod +x mcl     #给文件mcl执行权限<br>./mcl      #运行文件mcl安装<br></code></pre></td></tr></table></figure><p>#第三步：安装必要插件<br>#####mirai-api-http-v2<br>1)安装</p><ul><li>和第二步一样下载源码：<a href="https://github.com/project-mirai/mirai-api-http/releases/tag/v2.6.1">release</a><br><img src="http://cdn.jsdelivr.net/gh/heky12356/photobed/2022-08/msedge_GR7X5oQtpk.png" alt="请输入图片描述"></li><li>将下载好的文件放入 <code>mcl/plugins</code> 文件夹</li><li>启动 <code>mcl</code> 完成自动更新和启动<br>2)配置mirai-api-http-v2</li><li>打开<code> MCL/config/net.mamoe.mirai-api-http/setting.yml</code><blockquote><p>若无此文件请检查<code>mcl</code>是否被成功添加并且添加后启动过一次<code> mcl</code>，若没有请完成前文所述步骤再进行此步骤</p></blockquote></li><li>内容如下<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">adapters:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">http</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">ws</span><br><span class="hljs-attr">debug:</span> <span class="hljs-literal">false</span><br><span class="hljs-attr">enableVerify:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">verifyKey:</span> <span class="hljs-number">1234567890</span> <span class="hljs-comment"># 你可以自己设定</span><br><span class="hljs-attr">singleMode:</span> <span class="hljs-literal">false</span><br><span class="hljs-attr">cacheSize:</span> <span class="hljs-number">4096</span> <span class="hljs-comment"># 可选, 缓存大小, 默认4096. 缓存过小会导致引用回复与撤回消息失败</span><br><span class="hljs-attr">adapterSettings:</span><br>  <span class="hljs-comment">## 详情看 http adapter 使用说明 配置</span><br>  <span class="hljs-attr">http:</span><br>    <span class="hljs-attr">host:</span> <span class="hljs-string">localhost</span><br>    <span class="hljs-attr">port:</span> <span class="hljs-number">23456</span> <span class="hljs-comment"># 端口</span><br>    <span class="hljs-attr">cors:</span> [<span class="hljs-string">*</span>]<br><br>  <span class="hljs-comment">## 详情看 websocket adapter 使用说明 配置</span><br>  <span class="hljs-attr">ws:</span><br>    <span class="hljs-attr">host:</span> <span class="hljs-string">localhost</span><br>    <span class="hljs-attr">port:</span> <span class="hljs-number">23456</span> <span class="hljs-comment"># 端口</span><br>    <span class="hljs-attr">reservedSyncId:</span> <span class="hljs-number">-1</span> <span class="hljs-comment"># 确保为 -1, 否则 WebsocketAdapter(Experimental) 没法正常工作.</span><br></code></pre></td></tr></table></figure></li></ul><p>#第四步：配置自动登入<br>在启动<code>mcl</code>的情况下在mcl控制台输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">/autoLogin add &lt;你的QQ号&gt; &lt;你的QQ密码&gt;<br></code></pre></td></tr></table></figure><p>提示一下代码则表示添加成功</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">已成功添加 &#x27;&lt;你的QQ号&gt;&#x27;<br></code></pre></td></tr></table></figure><blockquote><p>如果要手机和mirai同时在线可以在前面的步骤完成并在启动的mcl控制台输入以下代码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">&gt;/autoLogin setConfig &lt;你的QQ号&gt; protocol IPAD<br></code></pre></td></tr></table></figure><blockquote><p>只有在重启之后生效</p></blockquote></blockquote><p>#第五步：登入QQ<br>执行<code>./mcl</code>启动<code>mirai-console</code></p><p>如果直接显示<code>Event: BotOnlineEvent(bot=Bot(&lt;你的QQ号&gt;))</code>，并有收到新消息，那么恭喜你，你已经完成了<code>mirai</code>的配置了<br>若显示如下输出或出现有如下内容的弹窗：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs linux">需要滑动验证码，完成后请输入ticket<br>url:http://xxx.xxx.xxx<br></code></pre></td></tr></table></figure><ul><li>在电脑上打开浏览器，输入程序提供的url，应当会出现滑动认证的画面，此时先不要进行认证<blockquote><p>推荐chrome</p></blockquote></li><li>单击 F12 键，会出现一个<code>DevTool</code>，找到上方选项卡，点击<code>Network</code>选项，再点击下方的<code>Fetch/XHR</code>选项</li><li>完成滑动验证，此时在<code>DevTool</code>界面中应会出现新的请求，找到其中名为<code>cap_union_new_verify</code>选项卡，点击其中的<code>Preview</code>选项卡，在其中找到<code>ticket</code>的值填入<code>mcl</code>并回车</li><li>gif演示：</li><li><img src="http://cdn.jsdelivr.net/gh/heky12356/photobed/txcaptcha.gif" alt="请输入图片描述"><br>-这个时候终端会显示另外一串url，复制并在电脑浏览器上打开，网页上会提示你验证，选择第一个扫码验证，验证成功之后，关掉网页，在终端控制台上按下回车键</li><li>此时就会显示<code>Event: BotOnlineEvent(bot=Bot(&lt;你的QQ号&gt;))</code>，并有收到新消息</li><li>恭喜你，你已经完成了<code>mirai</code>的搭建了<blockquote><p>在以后的每一次登入不需要重复以上步骤，即可自动登入，如果是要删除bot的QQ可以输入以下代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs linux">&gt;/autoLogin remove &lt;你的QQ号&gt;<br></code></pre></td></tr></table></figure></blockquote></li></ul><p>mirai插件下载：<br><a href="https://mirai.mamoe.net/category/11/%E6%8F%92%E4%BB%B6%E5%8F%91%E5%B8%83">MiraiForum</a><br>文章参考：<br><a href="https://sagiri-kawaii.github.io/sagiri-bot/deployment/linux/">SAGIRI BOT Docs</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>分享</category>
+      
+      <category>linux</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>分享几个随机图片api（还有碎碎念）</title>
+    <link href="/2022/07/30/%E5%88%86%E4%BA%AB%E5%87%A0%E4%B8%AA%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87api%EF%BC%88%E8%BF%98%E6%9C%89%E7%A2%8E%E7%A2%8E%E5%BF%B5%EF%BC%89/"/>
+    <url>/2022/07/30/%E5%88%86%E4%BA%AB%E5%87%A0%E4%B8%AA%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87api%EF%BC%88%E8%BF%98%E6%9C%89%E7%A2%8E%E7%A2%8E%E5%BF%B5%EF%BC%89/</url>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.dmoe.cc/random.php"><img src="http://www.dmoe.cc/random.php"></a><br><em>这上面是api的效果是第一个，你可以刷新一下网页，每次刷新就是不一样的图片了</em></p><ul><li><a href="http://www.dmoe.cc/random.php">http://www.dmoe.cc/random.php</a></li><li><a href="http://api.mtyqx.cn/tapi/random.php">http://api.mtyqx.cn/tapi/random.php</a></li><li><a href="https://api.ixiaowai.cn/api/api.php">https://api.ixiaowai.cn/api/api.php</a></li><li><a href="https://api.ixiaowai.cn/api/api.php">https://api.ixiaowai.cn/api/api.php</a></li><li><a href="http://api.mtyqx.cn/tapi/random.php">http://api.mtyqx.cn/tapi/random.php</a></li><li><a href="http://www.dmoe.cc/random.php">http://www.dmoe.cc/random.php</a></li></ul><hr><p>然后就是影视网站关停了，服务器的资源不是很支持<br>我看了一下其实每个月的流量还是很多的每个月都会浪费很多流量<br>我想了一下等以后有时间可能会做几个v2ray的节点出来做公益这样<br>还有就是以后的话可能像网盘这种的网站我会慢慢的关掉，之前其实我是还有一个域名是 ：heky.ml<br>这个的话被解析到了一个免费的虚拟主机上面，挂了三个网站<br>一个是导航页，两个网盘<br>网盘是那种分享型的不是图床那种，我没有什么东西可以分享的，而且运营的话其实也是挺麻烦的，打算停掉<br>可能我写完这篇的时候就已经停了。<br>然后这个域名下面也是有一个网盘是 alist 的源码<br>呃，这个是只在服务器上运行，我是挂的阿里云和百度云，以后可能也会停掉<br>最后的话我可能就是只留个博客<br>当然啊，我的主机只有1年，看有没有续费，没有续费的话我就跑路啦，有时间把网站备份一下，然后再github上fork一个hexo的博客就这样，哈哈<br>我前几天还突发奇想，去搞了一个.com的域名<br>1日元<br>是 kenourio.com<br>已经解析到我的主机了，打开应该就是heky.tk这个一样的<br>啊，难搞啊。过了一年还要去销户。:scream:<br>好了，那就这样吧。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>生活</category>
+      
+      <category>分享</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vim</title>
+    <link href="/2022/06/05/vim/"/>
+    <url>/2022/06/05/vim/</url>
+    
+    <content type="html"><![CDATA[<p>vim是linux上的编辑器<br>获取：</p><pre><code class="hljs">sudo apt-get install vim</code></pre><p>命令：<br>1、查看文件</p><pre><code class="hljs">cat 文件名</code></pre><p>2、编辑</p><pre><code class="hljs">vim 文件名</code></pre><p>按<code>键盘的i</code>进入编辑模式下面会有个提示</p><pre><code class="hljs">-- INSERT -- </code></pre><p>按<code>Esc</code>退出编辑模式<br>3、退出<br>先按<code>shift+:</code>然后输入q(不保存)&#x2F;wq(保存)&#x2F;q!(强制退出)</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>linux</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>typecho首页显示部分</title>
+    <link href="/2022/06/05/typecho%E9%A6%96%E9%A1%B5%E6%98%BE%E7%A4%BA%E9%83%A8%E5%88%86/"/>
+    <url>/2022/06/05/typecho%E9%A6%96%E9%A1%B5%E6%98%BE%E7%A4%BA%E9%83%A8%E5%88%86/</url>
+    
+    <content type="html"><![CDATA[<p>方法一：<br>在需要截取的地方加上</p><pre><code class="hljs">&lt;!--more--&gt;</code></pre><p>方法二：<br>编辑模板的 <code>index.php</code> 文件，找到这一行代码：</p><p>    </p><pre><code class="hljs">&lt;?php $this-&gt;content(&#39;阅读剩余部分&#39;); ?&gt;</code></pre><p>将其替换为：</p><p>    </p><pre><code class="hljs">&lt;?php $this-&gt;summary(); ?&gt;&lt;p class=&quot;more&quot;&gt;&lt;a href=&quot;&lt;?php $this-&gt;permalink() ?&gt;&quot;&gt;阅读全文&lt;/a&gt;&lt;/p&gt;</code></pre><p>保存即可。</p><p>可以使用相同的方法修改模板的 <code>archive.php</code> 文件，那么在归档页也可以做到显示摘要。<br>来源：<a href="https://www.jianshu.com/p/1e20d6289b5c">简书</a><br>作者：cherish_1217<br>方法三：<br>登录到后台-控制台-外观-编辑当前外观：<br>编辑文件 archive.php<br>编辑文件 index.php</p><p>修改两处分别找到:<br>&#x2F; 默认显示的是全文 &#x2F;</p><pre><code class="hljs">&lt;?php $this-&gt;content(&#39;- 阅读剩余部分 -&#39;); ?&gt;</code></pre><p>替换成(概要取300字)：<br>&#x2F; 自定义输出，如 300个字符 &#x2F;</p><pre><code class="hljs">&lt;?php $this-&gt;excerpt(300,&#39;- 阅读剩余部分 -&#39;); ?&gt;</code></pre><p>修改typecho首页显示文章的数量:<br>编辑文件 functions.php<br>在末尾添加:</p><p>&#x2F;* 自定义首页文章分布数量，如 10 *&#x2F;</p><pre><code class="hljs">function themeInit($archive) &#123;if ($archive-&gt;is(&#39;index&#39;)) &#123;$archive-&gt;parameter-&gt;pageSize = 10;&#125;&#125;</code></pre><p>方法四：<br>根据需要截长度</p><pre><code class="hljs">// 将原主题文件 archive.php 中的&lt;?php $this-&gt;content(&#39;- 阅读剩余部分 -&#39;); ?&gt;// 替换成&lt;?php    $length = 100;              // 截取长度    $more = &quot;- 阅读剩余部分 -&quot;;  // 显示符    $more = &quot;&lt;p class=\&quot;more\&quot;&gt;&lt;a href=\&quot;&#123;$this-&gt;permalink&#125;\&quot; title=\&quot;&#123;$this-&gt;title&#125;\&quot;&gt;&#123;$more&#125;&lt;/a&gt;&lt;/p&gt;&quot;;    false !== strpos($this-&gt;text, &#39;&lt;!--more--&gt;&#39;) ?    echo $this-&gt;excerpt . $more : $this-&gt;excerpt($length, $more);?&gt;</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>默认分类</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ufw（ubuntu fire wall）</title>
+    <link href="/2022/05/29/ufw%EF%BC%88ubuntu-fire-wall%EF%BC%89/"/>
+    <url>/2022/05/29/ufw%EF%BC%88ubuntu-fire-wall%EF%BC%89/</url>
+    
+    <content type="html"><![CDATA[<p>1.安装</p><pre><code class="hljs">sudo apt-get install ufw</code></pre><p>2.启用</p><pre><code class="hljs">sudo ufw enablesudo ufw default deny</code></pre><p>运行以上两条命令后，开启了防火墙，并在系统启动时自动开启。关闭所有外部对本机的访问，但本机访问外部正常。<br>3.开启&#x2F;禁用</p><pre><code class="hljs">sudo ufw allow|deny [service]</code></pre><p>打开或关闭某个端口，例如：</p><pre><code class="hljs">sudo ufw allow smtp　允许所有的外部IP访问本机的25/tcp (smtp)端口sudo ufw allow 22/tcp 允许所有的外部IP访问本机的22/tcp (ssh)端口sudo ufw allow 53 允许外部访问53端口(tcp/udp)sudo ufw allow from 192.168.1.100 允许此IP访问所有的本机端口</code></pre><p>4.查看防火墙状态</p><pre><code class="hljs">sudo ufw status</code></pre><p>5.根据端口删除规则<br>先查询规则号：</p><pre><code class="hljs">sudo ufw status numbered</code></pre><p>然后再根据号来删除</p><pre><code class="hljs">sudo ufw delete 2</code></pre><p>在开启ufw前就可以用ufw指令<br>建议先开发端口22、80<br>端口22是ssh端口不开放ssh链接不上<br>端口80是nginx&#x2F;apache服务器端口不开放则网站打不开<br>其他端口开放：<br>有使用应用例如宝塔（默认端口8888）<br>需要先开放端口否则不能访问面板&#x2F;不能运行</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>linux</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
