@@ -4,6 +4,44 @@
   
   
   <entry>
+    <title>hexo部署github教程（并添加自定义域名）</title>
+    <link href="/2022/11/20/hexo%E9%83%A8%E7%BD%B2github%E6%95%99%E7%A8%8B%EF%BC%88%E5%B9%B6%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%EF%BC%89/"/>
+    <url>/2022/11/20/hexo%E9%83%A8%E7%BD%B2github%E6%95%99%E7%A8%8B%EF%BC%88%E5%B9%B6%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%EF%BC%89/</url>
+    
+    <content type="html"><![CDATA[<p>hexo部署github教程（并添加自定义域名）</p><p>下载插件</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure><p>配置_config文件</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repository:</span> <span class="hljs-string">https://github.com/xxx/xxx.github.io.git</span>   <span class="hljs-comment">#仓库地址</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span><br></code></pre></td></tr></table></figure><p>配置SSH key</p><p>用git bash执行如下命令：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> ~/. ssh <span class="hljs-comment">#检查本机已存在的ssh密钥</span><br></code></pre></td></tr></table></figure><p>如果提示：No such file or directory 说明你是第一次使用git。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">ssh-keygen -t rsa -C <span class="hljs-string">&quot;邮件地址&quot;</span><br></code></pre></td></tr></table></figure><p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到<code>.ssh\id_rsa.pub</code>文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key</p><p>将刚复制的内容粘贴到key那里，title随便填，保存。</p><p>上传</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">hexo d<br></code></pre></td></tr></table></figure><p>添加域名</p><p>为自己的github pages 绑定域名</p><p>在自己的博客里面的<code>sourse</code> 文件夹里增加文件  <code>CNAME</code>:</p><p>里面的内容是自己的域名</p><p>为域名添加记录</p><ol><li>国内不能访问</li></ol><p>记录类型：A</p><p>记录值 ：<code>192.30.252.153</code>和<code>192.30.252.154</code>    （官网ip）</p><ol start="2"><li>国内可以访问</li></ol><p>记录类型：AAAA</p><p>记录值 ：2606:50c0:8002::153</p><p><img src="https://pan.heky.tk/d/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/image-20221120095841121.png" alt="image-20221120095841121"></p><p>也可以是ping 自己的github pages 查看ip</p><p>cmd -&gt; ping xxx.github.io</p><p>然后记录值就是ping的ip</p><ol start="3"><li><p>或者是</p><p>记录类型：CNAME</p><p>记录值：xxx.github.io #自己原来的githubpage域名</p></li></ol><p>添加完以后如果是2，那么当输入原来的GitHub pages的url时会自动跳转到添加的域名</p><p><img src="https://pan.heky.tk/d/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/image-20221120100459267.png" alt="image-20221120100459267"></p><p>在设置处可以看到域名已经改变</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>分享</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>博客从typecho导出md文件</title>
+    <link href="/2022/11/20/%E5%8D%9A%E5%AE%A2%E4%BB%8Etypecho%E5%AF%BC%E5%87%BAmd%E6%96%87%E4%BB%B6/"/>
+    <url>/2022/11/20/%E5%8D%9A%E5%AE%A2%E4%BB%8Etypecho%E5%AF%BC%E5%87%BAmd%E6%96%87%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<p>博客从typecho导出md文件</p><p>下载插件：<a href="%5Bgithub.com%5D(https://github.com/lizheming/typecho-export-hugo/releases/tag/0.1.0)">链接</a>（科学上网）</p><p>下载完成之后解压得到类似<code>typecho-export-hugo-master</code>文件夹，</p><p>将文件夹重命名为<code>Export2Hugo</code>,</p><p>上传到Typecho目录<code>usr/plugins</code>,然后在后台启用插件。</p><p>在后台界面，<code>控制台</code>菜单下会有一个<code>导出至Hugo</code>菜单，点击进入导出界面，点击按钮后获得导出的 Zip 文件，将解压后的 <code>content</code> 文件夹移动到 Hugo 目录下即可。</p><p>tips:</p><p>应该是插件的问题，导出的zip文件是不可解压的</p><p>但是可以在主机的这个地方找到文件</p><p><code> /tmp/Export2Hugo</code></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>分享</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>syncthing服务器（linux）端的安装教程 &amp;amp; 碎碎念</title>
     <link href="/2022/11/19/syncthing%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88linux%EF%BC%89%E7%AB%AF%E7%9A%84%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B-&amp;amp;-%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
     <url>/2022/11/19/syncthing%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88linux%EF%BC%89%E7%AB%AF%E7%9A%84%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B-&amp;amp;-%E7%A2%8E%E7%A2%8E%E5%BF%B5/</url>
